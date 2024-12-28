@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empayar Batik Exclusive</title>
+    <link rel="icon" type="image/PNG" sizes="32x32" href="logo-ebe/iconebe.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ebe.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="nav-menu">
+ <!--       <a href="index.html" class="logo-link">
+                <img src="logo-ebe/iconebe.PNG" alt="HEADER LOGO" class="header-img">
+            </a>-->                     
+            <a href="index.html">HOME</a>
+            <a href="profile.html">ABOUT US</a>
+            
+            <!-- Image inserted here -->
+            <a href="index.html" class="logo-between">
+                <img src="logo-ebe/wordebe.PNG" alt="LOGO IMAGE" class="logo-image">
+            </a>
+    
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <a href="kaftan.html">Caftan</a>
+                    <a href="jubah.html">Jubah</a>
+                    <a href="jubah.html">Blouse</a>
+                    <a href="baju-kurung.html">Baju Kurung</a>
+                    <a href="short-sleeve-shirt.html">Short Sleeve Men Shirt</a>
+                    <a href="long-sleeve-shirt.html">Long Sleeve Men Shirt</a>
+                    <a href="kain-pasang-cotton.html">Kain Pasang Cotton</a>
+                    <a href="kain-pasang-crepe.html">Kain Pasang Sutera Crepe</a>
+                </div>
+            </div>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="full-width-images">
+            <img src="img profile/1.png" alt="Photo 1" class="fade-in">
+            <img src="img profile/2.png" alt="Photo 2" class="fade-in">
+            <img src="img profile/3.png" alt="Photo 3" class="fade-in">
+            <img src="img profile/4.png" alt="Photo 4" class="fade-in">
+        </div>    
+    </main>    
+    
+    <footer>
+        <div>
+            <span class="shop-here">SHOP HERE:</span>
+            <a href="https://linktr.ee/empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                <img src="logos/linktree.png" 
+                     alt="Linktree Logo" 
+                     class="linktree-logo">
+            </a>
+        </div>
+        <p>&copy; 2024 Empayar Batik Exclusive. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript to make header sticky after scrolling past the header photo
+        window.onscroll = function() {
+            stickyHeader();
+        };
+
+        var header = document.querySelector('header');
+        var sticky = header.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("fixed-header");
+            } else {
+                header.classList.remove("fixed-header");
+            }
+        }
+
+        // JavaScript for mobile menu toggle
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+
+        // Toggle the 'active' class to show/hide the nav menu
+        mobileMenu.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+        });
+
+                document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll(".fade-in");
+
+            const observerOptions = {
+                root: null, // Viewport as the root
+                threshold: 0.1, // Trigger when 10% of the image is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible"); // Add visible class
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, observerOptions);
+
+            images.forEach(image => observer.observe(image));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empayar Batik Exclusive</title>
+    <link rel="icon" type="image/PNG" sizes="32x32" href="logo-ebe/iconebe.PNG">
+    <link rel="stylesheet" href="ebe.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="nav-menu">
+ <!--       <a href="index.html" class="logo-link">
+                <img src="logo-ebe/iconebe.PNG" alt="HEADER LOGO" class="header-img">
+            </a>-->                     
+            <a href="index.html">HOME</a>
+            <a href="profile.html">ABOUT US</a>
+            
+            <!-- Image inserted here -->
+            <a href="index.html" class="logo-between">
+                <img src="logo-ebe/wordebe.PNG" alt="LOGO IMAGE" class="logo-image">
+            </a>
+    
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <a href="kaftan.html">Caftan</a>
+                    <a href="jubah.html">Jubah</a>
+                    <a href="jubah.html">Blouse</a>
+                    <a href="baju-kurung.html">Baju Kurung</a>
+                    <a href="short-sleeve-shirt.html">Short Sleeve Men Shirt</a>
+                    <a href="long-sleeve-shirt.html">Long Sleeve Men Shirt</a>
+                    <a href="kain-pasang-cotton.html">Kain Pasang Cotton</a>
+                    <a href="kain-pasang-crepe.html">Kain Pasang Sutera Crepe</a>
+                </div>
+            </div>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <p class="fade-in-special">COTTON VISCOSE 4 METER BATIK FABRIC</p>
+       <!-- <h4 class="photo-description">Exclusive Hand Drawn Batik Design</h4> -->
+        <div class="content-wrapper">
+            <div class="photo-box">
+                <video controls>
+                    <source src="img cotton/vid stamped.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="photo-description">Our 4-meter Cotton Viscose Batik fabric is hand-drawn and offers exceptional comfort with its cooling and breathable properties.</p>
+            </div>
+
+            <div class="text-content">
+                <h3>COTTON VISCOSE 4 METER BATIK</h3>
+                <div class="space2"></div>
+                    <p>Material Cotton Viscose (No. 1 Cotton of this century)</p>
+                    <p>Very comfortable, cooling & breathable to wear</p>
+                    <p>Does not shrink when washed & easy to iron</p>
+                    <p>Each cotton exclusively hand drawn; One Design, One Piece</p>
+                <div class="space"></div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="photo-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img cotton/cotton 1.jpg" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="img cotton/cotton 2.jpg" alt="Image 2"></div>
+                        <div class="swiper-slide"><img src="img cotton/cotton 3.jpg" alt="Image 3"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <p class="photo-description">[Photo of Handdrawn Cotton Batik] Made from the finest Cotton Viscose, this fabric does not shrink when washed and is easy to iron.</p>
+            </div>
+        <div class="photo-box2">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img cotton/stamped 1.jpg" alt="Image 1"></div>
+                    <div class="swiper-slide"><img src="img cotton/stamped 2.jpg" alt="Image 2"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <p class="photo-description">[Photo of Stamped Cotton Batik] Each piece is unique, with one design per fabric, allowing for exclusive creations in your fashion design.</p>
+        </div>
+    </div>
+    </main>
+    <div class="space2"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <span class="shop-here">SHOP HERE:</span>
+            <a href="https://linktr.ee/empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                <img src="logos/linktree.png" 
+                     alt="Linktree Logo" 
+                     class="linktree-logo">
+            </a>
+        </div>
+        <p>&copy; 2024 Empayar Batik Exclusive. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+                // JavaScript to make header sticky after scrolling past the header photo
+                window.onscroll = function() {
+            stickyHeader();
+        };
+
+        var header = document.querySelector('header');
+        var sticky = header.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("fixed-header");
+            } else {
+                header.classList.remove("fixed-header");
+            }
+        }
+
+        // JavaScript for mobile menu toggle
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+
+        // Toggle the 'active' class to show/hide the nav menu
+        mobileMenu.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

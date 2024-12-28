@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empayar Batik Exclusive</title>
+    <link rel="icon" type="image/PNG" sizes="32x32" href="logo-ebe/iconebe.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ebe.css">
+</head>
+
+<body class="contact-page">
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="nav-menu">
+ <!--       <a href="index.html" class="logo-link">
+                <img src="logo-ebe/iconebe.PNG" alt="HEADER LOGO" class="header-img">
+            </a>-->                     
+            <a href="index.html">HOME</a>
+            <a href="profile.html">ABOUT US</a>
+            
+            <!-- Image inserted here -->
+            <a href="index.html" class="logo-between">
+                <img src="logo-ebe/wordebe.PNG" alt="LOGO IMAGE" class="logo-image">
+            </a>
+    
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <a href="kaftan.html">Caftan</a>
+                    <a href="jubah.html">Jubah</a>
+                    <a href="jubah.html">Blouse</a>
+                    <a href="baju-kurung.html">Baju Kurung</a>
+                    <a href="short-sleeve-shirt.html">Short Sleeve Men Shirt</a>
+                    <a href="long-sleeve-shirt.html">Long Sleeve Men Shirt</a>
+                    <a href="kain-pasang-cotton.html">Kain Pasang Cotton</a>
+                    <a href="kain-pasang-crepe.html">Kain Pasang Sutera Crepe</a>
+                </div>
+            </div>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <p class="animated-text">Contact Us!</p>
+            <div class="contact-item">
+                <img src="logos/phone.png" alt="Phone">
+                <a href="https://wa.link/kldabl">+60 11-5677 4731 (HQ)</a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/phone.png" alt="Phone">
+                <a href="https://wa.link/edio3g">+60 14-701 6471 (Bazar Tok Guru)</a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/email.png" alt="Email">
+                <a href="mailto:empayarbatikexc@gmail.com">empayarbatikexc@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/location.png" alt="Location">
+                <a href="https://maps.app.goo.gl/1e1bDQJQm6b8pzWu6" target="_blank" rel="noopener noreferrer">
+                    Empayar Batik Eksklusif HQ, Lot 811, Kampong Badang, 15350 Kota Bharu, Kelantan
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/insta.png" alt="Instagram">
+                <a href="https://www.instagram.com/empayarbatikofficial" target="_blank" rel="noopener noreferrer">
+                    @empayarbatikofficial
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/tiktok.png" alt="TikTok">
+                <a href="https://www.tiktok.com/@empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                    @empayarbatikexclusive
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="logos/shopee.png" alt="Shopee">
+                <a href="https://shopee.com/empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                    @empayarbatikexclusive
+                </a>
+            </div>
+        </section>
+    </main>    
+
+    <footer>
+        <div>
+            <span class="shop-here">SHOP HERE:</span>
+            <a href="https://linktr.ee/empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                <img src="logos/linktree.png" 
+                     alt="Linktree Logo" 
+                     class="linktree-logo">
+            </a>
+        </div>
+        <p>&copy; 2024 Empayar Batik Exclusive. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to make header sticky after scrolling past the header photo
+        window.onscroll = function() {
+            stickyHeader();
+        };
+    
+        var header = document.querySelector('header');
+        var sticky = header.offsetTop;
+    
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("fixed-header");
+            } else {
+                header.classList.remove("fixed-header");
+            }
+        }
+    
+        // JavaScript for mobile menu toggle
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById("nav-menu");
+
+        // Toggle the 'active' class to show/hide the nav menu
+        mobileMenu.addEventListener("click", function() {
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

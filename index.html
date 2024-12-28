@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empayar Batik Exclusive</title>
+    <link rel="icon" type="image/PNG" sizes="32x32" href="logo-ebe/iconebe.PNG">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ebe.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <img src="logo-ebe/header photo.png" alt="HEADER LOGO" class="header-photo">
+    
+    <!-- Header -->
+    <header>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="profile.html">ABOUT US</a>
+            <div class="dropdown">
+                <a href="products.html" class="dropbtn">PRODUCTS</a>
+                <div class="dropdown-content">
+                    <a href="kaftan.html">Caftan</a>
+                    <a href="jubah.html">Jubah</a>
+                    <a href="jubah.html">Blouse</a>
+                    <a href="baju-kurung.html">Baju Kurung</a>
+                    <a href="short-sleeve-shirt.html">Short Sleeve Men Shirt</a>
+                    <a href="long-sleeve-shirt.html">Long Sleeve Men Shirt</a>
+                    <a href="kain-pasang-cotton.html">Kain Pasang Cotton</a>
+                    <a href="kain-pasang-crepe.html">Kain Pasang Sutera Crepe</a>
+                </div>
+            </div>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <p class="fade-in-special">"Helping women stay stylish and elegant at work with authentic Malay heritage batik"</p>
+        <div class="content-wrapper">
+            <!-- Photo Box -->
+            <div class="photo-box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img index/home 1.jpg" alt="Image 1"></div>
+                        <div class="swiper-slide"><img src="img index/home 2.jpg" alt="Image 2"></div>
+                        <div class="swiper-slide"><img src="img index/home 3.jpg" alt="Image 3"></div>
+                        <div class="swiper-slide"><img src="img index/home 4.jpg" alt="Image 4"></div>
+                        <div class="swiper-slide"><img src="img index/home 5.jpg" alt="Image 5"></div>
+                        <div class="swiper-slide"><img src="img index/home 6.jpg" alt="Image 6"></div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            
+            <!-- Text Content -->
+            <div class="text-content">
+                <h3>About Our Batik</h3>
+                <p>Empayar Batik Exclusive (EBE) is a well-known batik store from Kelantan that proudly represents Malaysia's culture. The store was started with the aim of growing the batik business across the country by offering high-quality, hand-drawn batik designs. EBE’s collection includes batik fabrics, baju kurung, caftans, men’s shirts, and other modern and traditional clothing.</p>
+                <p>The business is passionate about sharing batik with Malaysians and promoting it internationally. EBE specifically focus on creating unique and high-quality designs that mix traditional and modern styles. EBE aim to grow the batik industry, EBE aims to make Malaysian batik a symbol of pride both locally and around the world.</p>
+            </div>
+        </div>
+
+        <p class="animated-text">Quality and Exclusivity, Our Priority</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <span class="shop-here">SHOP HERE:</span>
+            <a href="https://linktr.ee/empayarbatikexclusive" target="_blank" rel="noopener noreferrer">
+                <img src="logos/linktree.png" 
+                     alt="Linktree Logo" 
+                     class="linktree-logo">
+            </a>
+        </div>
+        <p>&copy; 2024 Empayar Batik Exclusive. All rights reserved.</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Swiper Initialization
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Sticky Header
+        window.onscroll = function() {
+            stickyHeader();
+        };
+
+        var header = document.querySelector('header');
+        var sticky = header.offsetTop;
+
+        function stickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("fixed-header");
+            } else {
+                header.classList.remove("fixed-header");
+            }
+        }
+    </script>
+</body>
+</html>
