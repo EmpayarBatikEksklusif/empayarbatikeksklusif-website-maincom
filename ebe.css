@@ -6,11 +6,13 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.8;
+    overflow-x: hidden;
 }
 
 html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -81,8 +83,8 @@ header:not(.fixed-header) {
 
 .menu-toggle .bar {
     background-color: #bf9e32;
-    height: 10px;
-    width: 25px;
+    height: 5px;
+    width: 20px;
     margin: 3px 0;
     border-radius: 3px;
 }
@@ -147,6 +149,17 @@ nav {
         font-size: 14px;
         margin-right: 20px;
         font-weight: normal;
+    }
+
+    header {
+        background: black;
+        color: #bf9e32;
+        padding: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: -10px;
+        transition: transform 0.3s ease-in-out;
     }
 }
 
@@ -384,13 +397,11 @@ main h3 {
     }
 
     .contact-info {
-        margin-top: 50%; /* Adds space at the top */
+        margin-top: 80%;
         margin-bottom: 0;
         padding-top: 20px;
-        width: 100%; /* Ensure it takes full width on smaller screens */
-        position: relative; /* Remove absolute positioning on mobile */
-        top: auto;
-        right: auto;
+        width: 80%;
+        position: relative;
     }
 
     .contact-item {
@@ -405,7 +416,7 @@ main h3 {
     }
 
     .contact-item a {
-        font-size: 16px; /* Adjust text size for mobile */
+        font-size: 14px; /* Adjust text size for mobile */
     }
 
     .contact-page .contact-info .item {
@@ -416,13 +427,7 @@ main h3 {
         font-size: 14px; /* Slightly smaller text for mobile */
     }
 
-    footer {
-        width: 100%; /* Ensure footer spans the entire screen width */
-        padding-left: 20px; /* Optional: Add padding on the left */
-        padding-right: 20px; /* Optional: Add padding on the right */
-    }
 }
-
 
 .content-wrapper {
     display: flex;
@@ -484,10 +489,6 @@ main h3 {
         max-width: 90%; /* Adjust width for smaller screens */
         margin: 0 auto; /* Center the elements */
     }
-
-    .photo-description {
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
 }
 
 /* Photo box styling */
@@ -544,6 +545,44 @@ main h3 {
     animation: typing 4s steps(35, end) infinite, blink-cursor 0.75s step-end infinite;
     max-width: 35ch;
     margin-top: 20px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 700px) {
+    .animated-text {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #aa8c2c;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(35, end) infinite, blink-cursor 0.75s step-end infinite;
+        max-width: 35ch;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .text-content p {
+        font-size: 1em;
+        width: 100%;
+    }
+    
+    main p {
+        font-size: 1em;
+        margin: 10px 0;
+        margin-right: 50px;
+    }
+
+    .fade-in-special {
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .text-content p, .fade-in-special {
+        animation: fadeInText 1.5s ease-in-out forwards;
+        animation-delay: 0.5s;
+        font-size: 14px;
+    }
 }
 
 @keyframes typing {
@@ -616,6 +655,19 @@ main h3 {
     width: 100%;
     max-width: 600px;
     margin: auto;
+}
+
+/* Mobile Navigation */
+@media (max-width: 700px) {
+    .photo-description {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        font-style: italic;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
 }
 
 .space {
@@ -712,7 +764,7 @@ footer {
     font-weight: bold;
     color: #41e661;
     margin-right: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
     animation: blink 1s infinite;
 }
 
@@ -742,4 +794,31 @@ footer .linktree-logo {
 
 .linktree-logo:hover {
     transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+/* Mobile Navigation */
+@media (max-width: 700px) {
+    .shop-here {
+        font-weight: bold;
+        color: #41e661;
+        font-size: 14px;
+        animation: blink 1s infinite;
+        width: 100%;
+    }
+
+    footer .linktree-logo {
+        width: 70px;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    footer {
+        background: black;
+        color: #bf9e32;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 14px;
+        border-top: 2px solid #bf9e32;
+        margin-top: -30px;
+    }
 }
